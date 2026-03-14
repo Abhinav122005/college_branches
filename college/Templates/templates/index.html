@@ -1,0 +1,108 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>College Website</title>
+
+<style>
+
+body{
+font-family:Arial;
+margin:0;
+background:#f4f6f9;
+text-align:center;
+}
+
+header{
+background:#004080;
+color:white;
+display:flex;
+align-items:center;
+justify-content:center;
+position:relative;
+padding:20px;
+}
+
+.logo{
+width:120px;
+position:absolute;
+left:20px;
+}
+
+table{
+margin:60px auto;
+border-collapse:collapse;
+width:50%;
+background:white;
+box-shadow:0 3px 8px rgba(0,0,0,0.2);
+}
+
+th,td{
+padding:12px;
+border:1px solid #ccc;
+font-size:18px;
+}
+
+th{
+background:#004080;
+color:white;
+}
+
+a{
+text-decoration:none;
+color:#004080;
+font-weight:bold;
+}
+
+a:hover{
+color:#ff6600;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<img src="{% static 'images/OIP.webp' %}" class="logo">
+
+<div>
+<h1>Trinity College of Engineering</h1>
+<p>Select Course</p>
+</div>
+
+</header>
+
+<table>
+
+<tr>
+<th>S.No</th>
+<th>Course</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td><a href="{% url 'btech' %}">B.Tech</a></td>
+</tr>
+
+<tr>
+<td>2</td>
+<td><a href="{% url 'mba' %}">MBA</a></td>
+</tr>
+
+<tr>
+<td>3</td>
+<td><a href="{% url 'diploma' %}">Diploma</a></td>
+</tr>
+
+<tr>
+<td>4</td>
+<td><a href="{% url 'pharmacy' %}">Pharmacy</a></td>
+</tr>
+
+</table>
+
+</body>
+</html>

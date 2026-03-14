@@ -1,0 +1,100 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>MBA Branches</title>
+
+<style>
+
+body{
+font-family:Arial;
+margin:0;
+background:#f4f6f9;
+text-align:center;
+}
+
+header{
+background:#004080;
+color:white;
+display:flex;
+align-items:center;
+justify-content:center;
+position:relative;
+padding:20px;
+}
+
+.logo{
+width:120px;
+position:absolute;
+left:20px;
+}
+
+.menu{
+position:absolute;
+right:20px;
+}
+
+.menu a{
+color:white;
+margin-left:15px;
+text-decoration:none;
+font-weight:bold;
+}
+
+table{
+margin:40px auto;
+border-collapse:collapse;
+width:60%;
+background:white;
+box-shadow:0 3px 8px rgba(0,0,0,0.2);
+}
+
+th,td{
+padding:12px;
+border:1px solid #ccc;
+font-size:18px;
+}
+
+th{
+background:#004080;
+color:white;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<img src="{% static 'images/OIP.webp' %}" class="logo">
+
+<h1>Trinity College of Engineering</h1>
+
+<div class="menu">
+<a href="{% url 'btech' %}">B.Tech</a>
+<a href="{% url 'diploma' %}">Diploma</a>
+<a href="{% url 'pharmacy' %}">Pharmacy</a>
+</div>
+
+</header>
+
+<h2>MBA Specializations</h2>
+
+<table>
+
+<tr>
+<th>S.No</th>
+<th>Branch</th>
+</tr>
+
+<tr><td>1</td><td>Finance</td></tr>
+<tr><td>2</td><td>Marketing</td></tr>
+<tr><td>3</td><td>Human Resource</td></tr>
+<tr><td>4</td><td>Business Analytics</td></tr>
+
+</table>
+
+</body>
+</html>
